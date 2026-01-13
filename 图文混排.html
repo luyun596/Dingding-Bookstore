@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图文混排</title>
+    <style>
+        #content {font-family: 微软雅黑,sans-serif;}
+        .article {display:inline-block;background-color:#000;color:#FFF;width:200px;padding:5px;position:relative;opacity: .9;}
+        #content h2 {height:20px;width:60px;background-color:#F00;font-weight:bolder;text-align:center;	font-size:14px;position:absolute;top:20px;left:10px;z-index: 1;}
+        .article h3 {font-size:12px; text-align: center;}
+        .article p {font-size:12px; text-indent: 2em;}
+        @keyframes move {
+            0%{-webkit-transform:rotate(0deg);
+                transform:rotate(0deg);}
+            13%{-webkit-transform:rotate(90deg);
+                transform:rotate(90deg);}
+            26%{-webkit-transform:rotate(180deg);
+                transform:rotate(180deg);}
+            39%{-webkit-transform:rotate(270deg);
+                transform:rotate(270deg);}
+            52%{-webkit-transform:rotate(360deg);
+                transform:rotate(360deg);}
+            65%{-webkit-transform: translate(100px,0px);
+				transform: translate(100px,0px);}
+            78%{-webkit-transform: translate(100px,100px);
+				transform: translate(100px,100px);}
+			91%{-webkit-transform: translate(0px,100px);
+				transform: translate(0px,100px);}
+			100%{-webkit-transform: translate(0px,0px);
+				transform: translate(0px,0px);}
+        }
+        #photo:hover img{-webkit-animation: move 3s linear infinite;
+            animation: move 3s linear infinite;}
+    </style>
+</head>
+<body>
+<article id="content">
+  <div class="article">
+     <h2>12月</h2>
+    <div id="photo"> <a href="#"><img src="images/about.gif" alt="" ></a></div>
+    <h3>叮叮书店</h3>
+    <p>这里是叮叮书店</p>
+  </div>
+</article>
+</body>
+</html>

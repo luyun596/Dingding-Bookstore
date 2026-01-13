@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>乘法口诀表</title>
+		<style>
+			.row {
+				font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+				background-color: yellow;
+				color: red;
+				padding: 5px;
+				margin: 2px 0;
+				width:550px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="table"></div>
+		<script>
+			const container = document.getElementById('table');
+			for ( i = 1; i <= 9; i++) {
+			    row = document.createElement('div');
+			    row.className = 'row';
+			    rowContent = '';
+			    
+			    for ( j = 1; j <= i; j++) {
+			        rowContent += `${j}*${i}=${i*j} `;
+			    }
+			    
+			    row.textContent = rowContent;
+			    container.appendChild(row);
+			}
+		</script>
+	</body>
+</html>
